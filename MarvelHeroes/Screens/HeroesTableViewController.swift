@@ -8,21 +8,58 @@
 import UIKit
 
 class HeroesTableViewController: UITableViewController {
+    
+    // MARK: - Properties
+    
+    private var heroArray = [Hero]()
+    
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBlue
+        title = "Heroes"
+        
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.title = "Heroes"
+        
+        configureTableView()
+        getHeroes()
+    }
+    
+    // MARK: - Methods
+    
+    private func configureTableView() {
+        tableView.separatorStyle = .none
+        tableView.register(HeroCell.self, forCellReuseIdentifier: HeroCell.reusableIdentifier)
+    }
+    
+    private func getHeroes() {
+        NetworkManager.shared.getHeroArray { [weak self] result in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let heroArray):
+                    self.heroArray = heroArray
+                    self.tableView.reloadData()
+                case . failure(let error):
+                    print("Error: \(error.rawValue)")
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { heroArray.count }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HeroCell.reusableIdentifier, for: indexPath) as! HeroCell
+        cell.set(hero: heroArray[indexPath.row])
+        
+        return cell
     }
     
     // MARK: - Table view delegate

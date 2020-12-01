@@ -15,6 +15,10 @@
 		0743F7D3257673DC003412A3 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7D2257673DC003412A3 /* Hero.swift */; };
 		0743F7D7257674F1003412A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7D6257674F1003412A3 /* NetworkManager.swift */; };
 		0743F7DA25767537003412A3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7D925767537003412A3 /* NetworkError.swift */; };
+		0743F7DE25767D5D003412A3 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7DD25767D5D003412A3 /* HeroCell.swift */; };
+		0743F7E225767E83003412A3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E125767E83003412A3 /* AvatarImageView.swift */; };
+		0743F7E525767EB7003412A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E425767EB7003412A3 /* Constants.swift */; };
+		0743F7E92576817A003412A3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E82576817A003412A3 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0743F7D2257673DC003412A3 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		0743F7D6257674F1003412A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0743F7D925767537003412A3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0743F7DD25767D5D003412A3 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		0743F7E125767E83003412A3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		0743F7E425767EB7003412A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0743F7E82576817A003412A3 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		0743F7AA25766651003412A3 /* MarvelHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				0743F7E72576815C003412A3 /* Extensions */,
 				0743F7D1257673C3003412A3 /* Models */,
 				0743F7C825767089003412A3 /* Custom Views */,
 				0743F7C625767077003412A3 /* Managers */,
@@ -102,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0743F7D925767537003412A3 /* NetworkError.swift */,
+				0743F7E425767EB7003412A3 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 		0743F7C825767089003412A3 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				0743F7E025767E65003412A3 /* Image Views */,
+				0743F7DC25767D41003412A3 /* Cells */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -119,6 +131,30 @@
 				0743F7D2257673DC003412A3 /* Hero.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0743F7DC25767D41003412A3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7DD25767D5D003412A3 /* HeroCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0743F7E025767E65003412A3 /* Image Views */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7E125767E83003412A3 /* AvatarImageView.swift */,
+			);
+			path = "Image Views";
+			sourceTree = "<group>";
+		};
+		0743F7E72576815C003412A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7E82576817A003412A3 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +228,14 @@
 			files = (
 				0743F7AC25766651003412A3 /* AppDelegate.swift in Sources */,
 				0743F7AE25766651003412A3 /* SceneDelegate.swift in Sources */,
+				0743F7E92576817A003412A3 /* UIView+Ext.swift in Sources */,
 				0743F7D7257674F1003412A3 /* NetworkManager.swift in Sources */,
 				0743F7DA25767537003412A3 /* NetworkError.swift in Sources */,
 				0743F7CD25767298003412A3 /* HeroesTableViewController.swift in Sources */,
+				0743F7E225767E83003412A3 /* AvatarImageView.swift in Sources */,
+				0743F7DE25767D5D003412A3 /* HeroCell.swift in Sources */,
 				0743F7D3257673DC003412A3 /* Hero.swift in Sources */,
+				0743F7E525767EB7003412A3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
