@@ -65,6 +65,7 @@ class HeroesTableViewController: UITableViewController {
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let heroDetailsViewController = HeroDetailsViewController(hero: heroArray[indexPath.row])
+        present(heroDetailsViewController, animated: true)
     }
 }

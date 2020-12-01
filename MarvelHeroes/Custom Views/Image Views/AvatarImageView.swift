@@ -14,7 +14,7 @@ class AvatarImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configure()
+        configureUI()
     }
     
     required init?(coder: NSCoder) {
@@ -23,11 +23,10 @@ class AvatarImageView: UIImageView {
     
     // MARK: - Methods
     
-    private func configure() {
+    private func configureUI() {
         translatesAutoresizingMaskIntoConstraints = false
         
         contentMode = .scaleAspectFill
-        layer.cornerRadius = 10
         clipsToBounds = true
         image = placeholderImage
     }

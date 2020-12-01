@@ -33,6 +33,7 @@ class HeroCell: UITableViewCell {
     private func configureUI() {
         addSubviews(avatarImageView, nameLabel)
         
+        avatarImageView.layer.cornerRadius = 10
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

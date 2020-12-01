@@ -19,6 +19,8 @@
 		0743F7E225767E83003412A3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E125767E83003412A3 /* AvatarImageView.swift */; };
 		0743F7E525767EB7003412A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E425767EB7003412A3 /* Constants.swift */; };
 		0743F7E92576817A003412A3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E82576817A003412A3 /* UIView+Ext.swift */; };
+		0743F7ED25768AEB003412A3 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7EC25768AEB003412A3 /* HeroDetailsViewController.swift */; };
+		0743F7F12576984A003412A3 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7F02576984A003412A3 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		0743F7E125767E83003412A3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		0743F7E425767EB7003412A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0743F7E82576817A003412A3 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		0743F7EC25768AEB003412A3 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
+		0743F7F02576984A003412A3 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0743F7CC25767298003412A3 /* HeroesTableViewController.swift */,
+				0743F7EC25768AEB003412A3 /* HeroDetailsViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		0743F7C825767089003412A3 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				0743F7EF25769826003412A3 /* Views */,
 				0743F7E025767E65003412A3 /* Image Views */,
 				0743F7DC25767D41003412A3 /* Cells */,
 			);
@@ -155,6 +161,14 @@
 				0743F7E82576817A003412A3 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0743F7EF25769826003412A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7F02576984A003412A3 /* DetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,8 @@
 				0743F7AE25766651003412A3 /* SceneDelegate.swift in Sources */,
 				0743F7E92576817A003412A3 /* UIView+Ext.swift in Sources */,
 				0743F7D7257674F1003412A3 /* NetworkManager.swift in Sources */,
+				0743F7ED25768AEB003412A3 /* HeroDetailsViewController.swift in Sources */,
+				0743F7F12576984A003412A3 /* DetailsView.swift in Sources */,
 				0743F7DA25767537003412A3 /* NetworkError.swift in Sources */,
 				0743F7CD25767298003412A3 /* HeroesTableViewController.swift in Sources */,
 				0743F7E225767E83003412A3 /* AvatarImageView.swift in Sources */,
