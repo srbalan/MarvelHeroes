@@ -12,6 +12,7 @@
 		0743F7B525766685003412A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0743F7B425766685003412A3 /* Assets.xcassets */; };
 		0743F7B825766685003412A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0743F7B625766685003412A3 /* LaunchScreen.storyboard */; };
 		0743F7CD25767298003412A3 /* HeroesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7CC25767298003412A3 /* HeroesTableViewController.swift */; };
+		0743F7D3257673DC003412A3 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7D2257673DC003412A3 /* Hero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0743F7B725766685003412A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0743F7B925766686003412A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "MarvelHeroes/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		0743F7CC25767298003412A3 /* HeroesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewController.swift; sourceTree = "<group>"; };
+		0743F7D2257673DC003412A3 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		0743F7AA25766651003412A3 /* MarvelHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				0743F7D1257673C3003412A3 /* Models */,
 				0743F7C825767089003412A3 /* Custom Views */,
 				0743F7C625767077003412A3 /* Managers */,
 				0743F7C52576706B003412A3 /* Screens */,
@@ -102,6 +105,14 @@
 			children = (
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		0743F7D1257673C3003412A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7D2257673DC003412A3 /* Hero.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				0743F7AC25766651003412A3 /* AppDelegate.swift in Sources */,
 				0743F7AE25766651003412A3 /* SceneDelegate.swift in Sources */,
 				0743F7CD25767298003412A3 /* HeroesTableViewController.swift in Sources */,
+				0743F7D3257673DC003412A3 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
