@@ -21,6 +21,7 @@
 		0743F7E92576817A003412A3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7E82576817A003412A3 /* UIView+Ext.swift */; };
 		0743F7ED25768AEB003412A3 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7EC25768AEB003412A3 /* HeroDetailsViewController.swift */; };
 		0743F7F12576984A003412A3 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7F02576984A003412A3 /* DetailsView.swift */; };
+		0743F7F525769A10003412A3 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7F425769A10003412A3 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0743F7E82576817A003412A3 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		0743F7EC25768AEB003412A3 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
 		0743F7F02576984A003412A3 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		0743F7F425769A10003412A3 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0743F7E82576817A003412A3 /* UIView+Ext.swift */,
+				0743F7F425769A10003412A3 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0743F7AC25766651003412A3 /* AppDelegate.swift in Sources */,
+				0743F7F525769A10003412A3 /* UIViewController+Ext.swift in Sources */,
 				0743F7AE25766651003412A3 /* SceneDelegate.swift in Sources */,
 				0743F7E92576817A003412A3 /* UIView+Ext.swift in Sources */,
 				0743F7D7257674F1003412A3 /* NetworkManager.swift in Sources */,

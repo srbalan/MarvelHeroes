@@ -126,6 +126,15 @@ class HeroDetailsViewController: UIViewController {
     }
     
     @objc private func imageDidTap() {
-        print("# Image Did Tap")
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "www.google.com"
+        components.path = "/search"
+        components.queryItems = [URLQueryItem(name: "q", value: hero.name)]
+        
+        if let searchURL = components.url {
+            print("URL: \(searchURL)")
+            presentSafariViewController(with: searchURL)
+        }
     }
 }
