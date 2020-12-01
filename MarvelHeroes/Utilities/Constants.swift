@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum SFSymbols {
+    static let circularClose = UIImage(systemName: "xmark.circle.fill")
+}
+
 enum Images {
     static let icon = UIImage(named: "Icon-Big")
 }

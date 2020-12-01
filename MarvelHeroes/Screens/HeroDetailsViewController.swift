@@ -16,6 +16,7 @@ class HeroDetailsViewController: UIViewController {
     // MARK: - Views
     
     private let scrollView = UIScrollView()
+    private let closeButton = UIButton()
     private let avatarImageView = AvatarImageView(frame: .zero)
     private let detailsStackView = UIStackView()
     private let nameLabel = UILabel()
@@ -47,7 +48,7 @@ class HeroDetailsViewController: UIViewController {
     
     private func configureUI() {
         view.backgroundColor = .systemBackground
-        view.addSubview(scrollView)
+        view.addSubviews(scrollView, closeButton)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -56,6 +57,21 @@ class HeroDetailsViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        closeButton.setImage(SFSymbols.circularClose, for: .normal)
+        closeButton.contentHorizontalAlignment = .fill
+        closeButton.contentVerticalAlignment = .fill
+        closeButton.imageView?.contentMode = .scaleAspectFit
+        closeButton.imageView?.tintColor = .white
+        closeButton.addTarget(self, action: #selector(closeButtonDidTap), for: .touchUpInside)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            closeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            closeButton.heightAnchor.constraint(equalToConstant: 32),
+            closeButton.widthAnchor.constraint(equalToConstant: 32)
         ])
         
         let wrapperView = UIView()
@@ -123,6 +139,12 @@ class HeroDetailsViewController: UIViewController {
         spacerView.setContentHuggingPriority(.defaultLow, for: .vertical)
         
         detailsStackView.addArrangedSubview(spacerView)
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func closeButtonDidTap() {
+        dismiss(animated: true)
     }
     
     @objc private func imageDidTap() {
