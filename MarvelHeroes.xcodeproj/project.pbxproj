@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		0743F7AC25766651003412A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7AB25766651003412A3 /* AppDelegate.swift */; };
 		0743F7AE25766651003412A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7AD25766651003412A3 /* SceneDelegate.swift */; };
-		0743F7B025766651003412A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7AF25766651003412A3 /* ViewController.swift */; };
 		0743F7B525766685003412A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0743F7B425766685003412A3 /* Assets.xcassets */; };
 		0743F7B825766685003412A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0743F7B625766685003412A3 /* LaunchScreen.storyboard */; };
+		0743F7CD25767298003412A3 /* HeroesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743F7CC25767298003412A3 /* HeroesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0743F7A825766651003412A3 /* MarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0743F7AB25766651003412A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0743F7AD25766651003412A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0743F7AF25766651003412A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0743F7B425766685003412A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0743F7B725766685003412A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0743F7B925766686003412A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0743F7B925766686003412A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "MarvelHeroes/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		0743F7CC25767298003412A3 /* HeroesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,54 @@
 		0743F7AA25766651003412A3 /* MarvelHeroes */ = {
 			isa = PBXGroup;
 			children = (
-				0743F7AB25766651003412A3 /* AppDelegate.swift */,
-				0743F7AD25766651003412A3 /* SceneDelegate.swift */,
-				0743F7AF25766651003412A3 /* ViewController.swift */,
-				0743F7B425766685003412A3 /* Assets.xcassets */,
-				0743F7B625766685003412A3 /* LaunchScreen.storyboard */,
-				0743F7B925766686003412A3 /* Info.plist */,
+				0743F7C825767089003412A3 /* Custom Views */,
+				0743F7C625767077003412A3 /* Managers */,
+				0743F7C52576706B003412A3 /* Screens */,
+				0743F7C425767064003412A3 /* Supporting Files */,
+				0743F7C72576707F003412A3 /* Utilities */,
 			);
 			path = MarvelHeroes;
+			sourceTree = "<group>";
+		};
+		0743F7C425767064003412A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7AB25766651003412A3 /* AppDelegate.swift */,
+				0743F7B425766685003412A3 /* Assets.xcassets */,
+				0743F7B925766686003412A3 /* Info.plist */,
+				0743F7B625766685003412A3 /* LaunchScreen.storyboard */,
+				0743F7AD25766651003412A3 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0743F7C52576706B003412A3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0743F7CC25767298003412A3 /* HeroesTableViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0743F7C625767077003412A3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0743F7C72576707F003412A3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0743F7C825767089003412A3 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0743F7B025766651003412A3 /* ViewController.swift in Sources */,
 				0743F7AC25766651003412A3 /* AppDelegate.swift in Sources */,
 				0743F7AE25766651003412A3 /* SceneDelegate.swift in Sources */,
+				0743F7CD25767298003412A3 /* HeroesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RNYAZR6KB;
-				INFOPLIST_FILE = MarvelHeroes/Info.plist;
+				INFOPLIST_FILE = "MarvelHeroes/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RNYAZR6KB;
-				INFOPLIST_FILE = MarvelHeroes/Info.plist;
+				INFOPLIST_FILE = "MarvelHeroes/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
