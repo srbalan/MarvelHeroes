@@ -133,7 +133,6 @@ class HeroDetailsViewController: UIViewController {
         components.queryItems = [URLQueryItem(name: "q", value: hero.name)]
         
         if let searchURL = components.url {
-            print("URL: \(searchURL)")
             presentSafariViewController(with: searchURL)
         }
     }
