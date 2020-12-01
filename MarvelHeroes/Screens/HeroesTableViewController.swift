@@ -9,6 +9,10 @@ import UIKit
 
 class HeroesTableViewController: UITableViewController {
     
+    // MARK: - Views
+    
+    private let tableViewActivityIndicator = UIActivityIndicatorView(style: .medium)
+    
     // MARK: - Properties
     
     private var heroArray = [Hero]()
@@ -18,28 +22,39 @@ class HeroesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Heroes"
-        
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.title = "Heroes"
-        
+        configureUI()
         configureTableView()
         getHeroes()
     }
     
     // MARK: - Methods
     
+    private func configureUI() {
+        title = "Heroes"
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     private func configureTableView() {
         tableView.separatorStyle = .none
         tableView.register(HeroCell.self, forCellReuseIdentifier: HeroCell.reusableIdentifier)
+        
+        tableViewActivityIndicator.hidesWhenStopped = true
+        tableViewActivityIndicator.frame = CGRect(x: 0, y: 0,
+                                                  width: tableView.bounds.width,
+                                                  height: 44)
+        tableView.tableFooterView = tableViewActivityIndicator
     }
     
     private func getHeroes() {
+        tableViewActivityIndicator.startAnimating()
+        
         NetworkManager.shared.getHeroArray { [weak self] result in
             guard let self = self else { return }
             
             DispatchQueue.main.async {
+                self.tableViewActivityIndicator.stopAnimating()
+                
                 switch result {
                 case .success(let heroArray):
                     self.heroArray = heroArray
