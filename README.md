@@ -1,4 +1,4 @@
-# (Lemi) iOS Developer - Coding Challenge
+# iOS Developer - Coding Challenge
 
 
 ## General
